@@ -15,13 +15,11 @@ pub mod config {
     }
 
     pub fn load_from_file(file_name: &str) -> Result<Config, io::Error> {
-        debug!("loading config from file '{}'", file_name);
-
         let input = File::open(file_name).expect("unable to load config from file");
         let buffered = BufReader::new(input);
 
-        let mut base_url: String = String::from("");
-        let mut auth_token: String = String::from("");
+        let mut base_url: String = String::new();
+        let mut auth_token: String = String::new();
 
         let base_url_regex = get_property_regex(BASE_URL_PROPERTY);
         let auth_token_regex = get_property_regex(AUTH_TOKEN_PROPERTY);
@@ -32,17 +30,13 @@ pub mod config {
             if base_url_regex.is_match(&row) {
                 let groups_matches = base_url_regex.captures_iter(&row).next();
                 let groups = groups_matches.unwrap();
-
                 base_url = String::from(&groups[1]);
-                debug!("base_url '{}'", base_url);
             }
 
             if auth_token_regex.is_match(&row) {
                 let groups_matches = auth_token_regex.captures_iter(&row).next();
                 let groups = groups_matches.unwrap();
-
                 auth_token = String::from(&groups[1]);
-                info!("auth token '{}'", auth_token);
             }
         }
 
@@ -68,7 +62,7 @@ pub mod config {
         if config.base_url != "" && config.auth_token != "" {
             result = true
 
-        } else { error!("one or more configuration properties are missing") }
+        } else { println!("[!] error: one or more configuration properties are missing") }
 
         return result;
     }

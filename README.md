@@ -14,5 +14,5 @@ Client for [Telegram Bot Rest service](https://github.com/tinyops-ru/telegram-bo
 3. Send message:
 
 ```shell script
-telegram-bot-rest-client your message here
+telegram-bot-rest-client "your message here"
 ```
