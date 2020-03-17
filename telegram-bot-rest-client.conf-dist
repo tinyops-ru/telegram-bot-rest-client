@@ -1,0 +1,5 @@
+# Telegram Bot REST Service URL
+# Example: http://your-server:12345
+base-url=CHANGE-ME
+
+auth-token=CHANGE-ME
