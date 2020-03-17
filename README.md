@@ -16,3 +16,13 @@ Client for [Telegram Bot Rest service](https://github.com/tinyops-ru/telegram-bo
 ```shell script
 telegram-bot-rest-client "your message here"
 ```
+
+## How to build from sources
+
+1. Install [Rust](https://www.rust-lang.org/learn/get-started)
+
+2. Run:
+
+```shell script
+cargo build --release
+```
