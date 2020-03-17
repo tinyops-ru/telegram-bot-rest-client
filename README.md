@@ -6,7 +6,7 @@ Client for [Telegram Bot Rest service](https://github.com/tinyops-ru/telegram-bo
 
 1. Create configuration:
     ```shell script
-    cp telegram-bot-rest-client.conf-dist telegram-bot-rest-client.conf
+    cp tbrc.conf-dist tbrc.conf
     ```
 
 2. Edit config file.
@@ -14,7 +14,7 @@ Client for [Telegram Bot Rest service](https://github.com/tinyops-ru/telegram-bo
 3. Send message:
 
 ```shell script
-telegram-bot-rest-client "your message here"
+tbrc "your message here"
 ```
 
 ## How to build from sources

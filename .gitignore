@@ -1,4 +1,4 @@
-/telegram-bot-rest-client.conf
+/tbrc.conf
 /target
 /*.log
 .idea

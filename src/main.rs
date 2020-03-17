@@ -19,7 +19,7 @@ fn main() {
     if args.len() == 2 {
         let message = &args[1];
 
-        match load_from_file("telegram-bot-rest-client.conf") {
+        match load_from_file("tbrc.conf") {
             Ok(config) => {
                 println!("config has been loaded from file");
                 send_message(&config.base_url, &config.auth_token, &message);

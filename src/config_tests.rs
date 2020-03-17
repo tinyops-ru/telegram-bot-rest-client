@@ -2,7 +2,7 @@
 mod config_tests {
     use crate::config::config::load_from_file;
 
-    const VALID_CONFIG: &str = "tests/telegram-bot-rest-client.conf";
+    const VALID_CONFIG: &str = "tests/tbrc.conf";
 
     #[test]
     fn result_config_should_contain_base_url() {
