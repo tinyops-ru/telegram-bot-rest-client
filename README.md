@@ -9,13 +9,13 @@ Client for [Telegram Bot Rest service](https://github.com/tinyops-ru/telegram-bo
     cp tbrc.conf-dist tbrc.conf
     ```
 
-2. Edit config file.
+2. Edit `tbrc.conf` file.
 
 3. Send message:
 
-```shell script
-tbrc "your message here"
-```
+    ```shell script
+    tbrc "your message here"
+    ```
 
 ## How to build from sources
 
