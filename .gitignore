@@ -1,0 +1,4 @@
+/telegram-bot-rest-client.conf
+/target
+/*.log
+.idea
