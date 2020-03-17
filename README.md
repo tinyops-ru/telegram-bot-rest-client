@@ -19,9 +19,15 @@ telegram-bot-rest-client "your message here"
 
 ## How to build from sources
 
-1. Install [Rust](https://www.rust-lang.org/learn/get-started)
+### Build on CentOS 6/7+
 
-2. Run:
+```shell script
+cargo build --release
+```
+
+### Build on Windows
+
+Comment openssl dependency from `Cargo.toml`.
 
 ```shell script
 cargo build --release
