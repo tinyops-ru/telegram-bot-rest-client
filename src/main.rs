@@ -14,6 +14,10 @@ const VERSION: &str = "1.0.0";
 fn main() {
     println!("Telegram Bot REST Client v{}", VERSION);
 
+    let work_dir = env::current_dir().expect("unable to get current dir");
+
+    println!("work dir: {}", work_dir.display());
+
     let args: Vec<String> = env::args().collect();
 
     if args.len() == 2 {
