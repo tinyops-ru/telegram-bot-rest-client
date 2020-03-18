@@ -16,6 +16,14 @@ Client for [Telegram Bot Rest service](https://github.com/tinyops-ru/telegram-bo
     ```shell script
     tbrc "your message here"
     ```
+   
+### Specify working directory
+
+Example:
+
+```shell script
+tbrc --work-dir=/home/user "my message"
+```
 
 ## How to build from sources
 
