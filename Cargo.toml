@@ -16,4 +16,4 @@ tokio = { version = "0.2", features = ["full"] }
 base64 = "0.12"
 
 # Linux Only
-# openssl = { version = "0.10", features = ["vendored"] }
+openssl = { version = "0.10", features = ["vendored"] }
