@@ -12,6 +12,8 @@ const SEND_MESSAGE_ENDPOINT: &str = "/rest/send";
 const MESSAGE_FORM_PROPERTY: &str = "message";
 const HEADER_TOKEN: &str = "token";
 
+const MESSAGE_ARGUMENT: &str = "message";
+
 const WORK_DIR_ARGUMENT: &str = "work-dir";
 
 const VERSION: &str = "1.0.0";
@@ -23,8 +25,8 @@ fn main() {
         .about("Client for Telegram Bot REST Service")
 
         .arg(
-        Arg::with_name("message")
-               .help("message") // Displayed when showing help info
+        Arg::with_name(MESSAGE_ARGUMENT)
+               .help(MESSAGE_ARGUMENT) // Displayed when showing help info
                .index(1) // Set the order in which the user must
                .required(true)
         )
@@ -41,7 +43,7 @@ fn main() {
         println!("work dir: {}", work_dir.display());
     }
 
-    match matches.value_of("message") {
+    match matches.value_of(MESSAGE_ARGUMENT) {
         Some(message) => {
             match load_from_file("tbrc.conf") {
                 Ok(config) => {
