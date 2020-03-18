@@ -16,7 +16,7 @@ const MESSAGE_ARGUMENT: &str = "message";
 
 const WORK_DIR_ARGUMENT: &str = "work-dir";
 
-const VERSION: &str = "1.0.0";
+const VERSION: &str = "1.1.0";
 
 fn main() {
     let matches = App::new("Telegram Bot REST Client")
